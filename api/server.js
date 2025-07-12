@@ -19,4 +19,4 @@ app.get("/", (req, res) => {
 });
 
 
-module.exports = serverless(app);
+module.exports = app;
