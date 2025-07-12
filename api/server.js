@@ -1,5 +1,7 @@
 const express = require("express");
 const cors = require("cors");
+const serverless = require("serverless-http");
+
 const app = express();
 
 app.use(cors());
@@ -16,7 +18,6 @@ app.get("/", (req, res) => {
   res.json(tasks);
 });
 
-const PORT = 4000;
-app.listen(PORT, () => {
-  console.log(`API server running on http://localhost:${PORT}`);
-});
+
+
+module.exports = serverless(app);
